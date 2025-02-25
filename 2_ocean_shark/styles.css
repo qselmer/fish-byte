@@ -1,0 +1,110 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(#adf, rgb(236, 233, 171) 20%, rgb(14, 95, 115) 0);
+}
+
+.bubble {
+  position: absolute;
+  width: 3vmin;
+  height: 3vmin;
+  border-radius: 70%;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: -3vmin -2vmin 0 -0.5vmin rgba(255, 255, 255, 0.3), 3vmin -3vmin 0 -0.25vmin rgba(255, 255, 255, 0.5), -4vmin 2vmin 0 -0.5vmin rgba(255, 255, 255, 0.3), 4vmin 3vmin 0 -0.25vmin rgba(255, 255, 255, 0.5);
+  animation: float-bubbles 5s infinite linear;
+}
+
+#bubbles-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#shark {
+  width: 50vmin;
+  height: 10vmin;
+  position: absolute;
+  top: 50%;
+  left: -50vmin;
+  transform: translateY(-50%);
+  animation: swim-shark 10s infinite linear;
+}
+
+#shark div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.shark-body {
+  left: 0vmin;
+  width: 50vmin;
+  height: 30vmin;
+  background: #666;
+  border-radius: 50%;
+  transform: translate(0, -50%);
+  clip-path: polygon(0% 50%, 100% 50%, 100% 90%, 70% 70%, 90% 100%, 0% 100%);
+}
+
+.shark-eye {
+  width: 2.5vmin;
+  height: 2.5vmin;
+  border-radius: 50%;
+  background: white;
+  box-shadow: inset -0.2vmin -0.45vmin 0 0.6vmin black;
+  top: 1vmin;
+  right: 8vmin;
+}
+
+.aleta, .tail, .fin {
+  width: 12vmin;
+  height: 12vmin;
+  box-shadow: 4vmin -0.5vmin #666;
+  border-radius: 80%;
+  top: -3vmin;
+  transform: translate(-130%, -3vmin) rotate(10deg);
+}
+
+.aleta {
+  box-shadow: 7vmin 0vmin #575757;
+  top: 8vmin;
+  left: 8vmin;
+  transform: none;
+  clip-path: polygon(0% 50%, 200% 40%, 200% 100%, 0% 100%);
+}
+
+.fin {
+  box-shadow: 7vmin 0vmin #666;
+  left: 25vmin;
+}
+
+.gill {
+  width: 8vmin;
+  height: 12vmin;
+  border-radius: 100%;
+  box-shadow: -2.5vmin 0 0 -1.7vmin rgba(0, 0, 0, 0.25);
+  left: 30vmin;
+}
+
+.gill-2 {
+  transform: translate(-1.5vmin, 0) scale(0.9);
+}
+
+.gill-3 {
+  transform: translate(-3vmin, 0) scale(0.8);
+}
+
+@keyframes swim-shark {
+  from { left: -50vmin; }
+  to { left: 110vw; }
+}
+
+@keyframes float-bubbles {
+  from { top: 90%; opacity: 1; }
+  to { top: 10%; opacity: 0; }
+}
