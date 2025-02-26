@@ -108,3 +108,36 @@ html, body {
   from { top: 90%; opacity: 1; }
   to { top: 10%; opacity: 0; }
 }
+
+#donation-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+#donation-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.donation-btn {
+  display: block;
+  padding: 8px 8px;
+  font-size: 12px;
+  font-weight: none;
+  text-decoration: none;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.coffee { background-color: #ffdd57; }
+.kofi { background-color: #29abe0; }
+.paypal { background-color: #0070ba; }
+
+.donation-btn:hover {
+  filter: brightness(1.2);
+}
